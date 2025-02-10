@@ -1,0 +1,65 @@
+Innocent roles with effects that can be prevented
+[✓] Deputy: doesn't promote on Detective death
+[] Glitch: No longer appears as traitor
+    * It's pretty baked in, will require a lot of work
+[✓] Good Twin: does not receive power-up if Evil Twin dies
+[✓] Infected: does not turn into a zombie when the trigger occurs
+[] Paramedic: defib fails to ever revive a player
+    * Current implementations of the defib in cr4ttt don't have a fail state
+[✓] Phantom: does not haunt their killer
+[✓] Revenger: does not get tracking on their lover's killer if they die
+[] Trickster: no traps can be activated
+    * Functionality appears baked-in
+[✓] Veteran: does not receive their buff when they become the last innocent alive
+[✓] Vindicator: does not respawn as independent
+[✓] Turncoat: device announces and lowers health but never changes team
+
+Innocent roles with generic functionality
+[] Default: damage reduction, firerate reduction (configurable)
+    * Includes Innocent, Scout
+[✓] Doctor: prevent shop functionality
+[✓] Mercenary: prevent shop functionality
+
+Detective
+[] Default effect: searched bodies show the wrong role
+    * Includes Illusionist
+[] Detective: does not ever find DNA, cannot use DNA scanner
+[✓] Marshall: using their badge does not mark the person to become deputy/impersonator
+[] Medium: souls disappear, seance reveals nothing
+[] Paladin: no longer heals or reduces incoming damage
+[] Quartermaster: dropped crates contain no items
+[] Sapper: players are no longer immune to explosion damage
+[] Tracker: footsteps stop appearing
+
+Traitor
+[] Assassin: their target becomes themself, any kill on another player fails the contract
+[✓] Evil Twin: does not power up if the Good Twin dies
+[] Hypnotist: doesn't revive the player OR the player revives as innocent?
+[✓] Impersonator: does not get promoted when the detective dies
+[] Informant: Data is incorrect, tracking is randomized
+[] Parasite: never infects the player that kills them
+[] Quack: mirrors the Doctor
+[] Spy: doesn't steal the name/model of player they kill
+[] Vampire: Dunno how role works
+
+Jester
+[] Beggar: doesn't join any team (doesn't revive if killed)
+[] Bodysnatcher: device doesn't work
+[] Clown: never turns when game would otherwise end (race condition possible with Poisoner effect ending and clown effect working)
+[] Cupid: ?
+[] Guesser: device doesn't work
+[] Jester: dying doesn't result in a round win
+[] Loot Goblin: nerf mobility? (reduce movespeed, no jumping?)
+[] Sponge: disables the aura
+[] Swapper: doesn't swap, instead just dies
+
+Independent
+[] Arsonist: cannot douse players and cannot activate the fire
+[] Drunk: dies to "alcohol poisining" instead of joining a team?
+[] Hive Mind: Prevents further assimilation into the hive mind
+[] Killer: ?
+[] Mad Scientists: device doesn't work
+[] Old Man: killed outright instead of given shotgun
+[] Plaguemaster: ?
+[] Shadow: They never join the player's team OR slowly drain as if they are always too far away from their target
+[] Zombies: killed players don't resurrect and join the Zombie team
